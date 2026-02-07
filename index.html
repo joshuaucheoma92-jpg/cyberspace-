@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberspace | System Terminal</title>
+    <style>
+        :root {
+            --bg-color: #080808;
+            --terminal-green: #00ff41;
+            --terminal-white: #e0e0e0;
+            --dim-green: #003b11;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--terminal-green);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .terminal-window {
+            width: 100%;
+            max-width: 800px;
+            background: #000;
+            border: 1px solid var(--terminal-green);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+            padding: 30px;
+            position: relative;
+        }
+
+        .terminal-header {
+            border-bottom: 1px solid var(--dim-green);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--dim-green);
+        }
+
+        .command { color: #fff; font-weight: bold; }
+        .bio { color: var(--terminal-white); line-height: 1.6; margin-bottom: 30px; }
+
+        .project-list {
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 2px solid var(--dim-green);
+        }
+
+        .project-item { margin-bottom: 15px; }
+
+        .project-title {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .project-desc {
+            color: var(--terminal-white);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .module-card {
+            border: 1px solid var(--dim-green);
+            padding: 8px;
+            font-size: 0.75rem;
+        }
+
+        .status-ok { color: var(--terminal-green); float: right; }
+
+        .links-container { margin-top: 30px; font-size: 0.9rem; border-top: 1px solid var(--dim-green); padding-top: 20px; }
+        a { color: var(--terminal-green); text-decoration: none; border-bottom: 1px dashed var(--terminal-green); }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: var(--terminal-green);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+<div class="terminal-window">
+    <div class="terminal-header">
+        <span>CYBERSPACE_OS [VER 2.6.0]</span>
+        <span>AUTH_USER: joshuaucheoma92-jpg</span>
+    </div>
+
+    <div class="bio">
+        <span class="command">Guest@Cyberspace:~$</span> whoami<br>
+        Aspiring Software Engineer & Forex Strategy Architect. Focused on building high-performance systems and data-driven solutions.
+    </div>
+
+    <div class="command">Guest@Cyberspace:~$</span> ls ./active_projects<br>
+    <div class="project-list">
+        <div class="project-item">
+            <span class="project-title">[01] TREND_PULLBACK_v1.0</span>
+            <div class="project-desc">A trading algorithm built for Exness using 20/50 EMA crosses and risk-averse money management.</div>
+        </div>
+        <div class="project-item">
+            <span class="project-title">[02] SYSTEM_DIAGNOSTICS</span>
+            <div class="project-desc">Hardware research and optimization for mobile S-series infrastructure.</div>
+        </div>
+    </div>
+
+    <div class="command">Guest@Cyberspace:~$</span> system_check --status
+    <div class="modules-grid">
+        <div class="module-card">GITHUB_HOSTING <span class="status-ok">[OK]</span></div>
+        <div class="module-card">TRADING_LOGIC <span class="status-ok">[OK]</span></div>
+        <div class="module-card">HTML_TERMINAL <span class="status-ok">[OK]</span></div>
+        <div class="module-card">DATA_SECURITY <span class="status-ok">[OK]</span></div>
+    </div>
+
+    <div class="links-container">
+        <span class="command">Guest@Cyberspace:~$</span> echo $CONTACT<br>
+        <div style="margin-top:10px;">
+            Email: <a href="mailto:Serenaivy91@gmail.com">Serenaivy91@gmail.com</a>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px;">
+        <span class="command">Guest@Cyberspace:~$</span> <span class="cursor"></span>
+    </p>
+</div>
+
+</body>
+</html>
